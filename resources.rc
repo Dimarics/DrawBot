@@ -1,0 +1,29 @@
+#include <windows.h>
+
+IDI_ICON1 ICON "icon.ico"
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "Comments",           "DrawBot"
+            VALUE "CompanyName",        "DimasSoft"
+            VALUE "FileDescription",    "Преобразование изображений в gcode"
+            VALUE "FileVersion",        "1.0.0.0"
+            VALUE "InternalName",       "DrawBot"
+            VALUE "LegalCopyright",     "DimasSoft©"
+            VALUE "OriginalFilename",   "DrawBot"
+            VALUE "ProductName",        "DrawBot"
+            VALUE "ProductVersion",     "1.0.0.0"
+        END
+    END
+ 
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0419, 1252
+    END
+END

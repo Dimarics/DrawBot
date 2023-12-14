@@ -1,0 +1,1435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWidget</class>
+ <widget class="QMainWindow" name="MainWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1408</width>
+    <height>567</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	background-color: rgb(70, 70, 80);
+}
+
+QLabel {
+	color: white;
+}
+
+QToolButton {
+	color: white;
+	background-color: rgb(70, 70, 70);
+	border: 2px outset rgb(55, 55, 55);
+}
+
+QToolButton:hover {
+	color: rgb(0, 255, 255);
+}
+
+QToolButton:pressed {
+	border-style: inset;
+	padding-top: 2px;
+	padding-left: 2px;
+}
+
+QToolButton:checked {
+	border-style: inset;
+	padding-top: 2px;
+	padding-left: 2px;
+}
+
+QCheckBox {
+	spacing : 10px;
+	color: white;
+}
+
+QMenu {
+	background-color: rgb(60, 60, 60);
+	border: 1px solid rgb(100, 100, 100);
+	selection-background-color: rgb(20, 70, 130);
+	font-size: 12pt;
+	color: white;
+}
+
+QComboBox {
+	color: white;
+	background-color: rgb(60, 60, 60);
+	border: 1px solid rgb(100, 100, 100);
+	border-radius: 4px;
+	padding-left: 7px;
+	padding-bottom: 1px;
+}
+
+QComboBox::drop-down {
+	border: none;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-right: 3px;
+	padding-top: 2px;
+    width: 18px;
+}
+
+ QComboBox::down-arrow {
+	image: url(:/images/downArrow.svg);
+}
+
+QComboBox QAbstractItemView {
+	background-color: rgb(60, 60, 60);
+	border: 1px solid rgb(100, 100, 100);
+	color: white;
+}
+
+QAbstractSpinBox {
+	color: white;
+	background-color: rgb(60, 60, 60);
+	border: 1px solid rgb(100, 100, 100);
+	border-radius: 4px;
+	padding-left: 7px;
+}
+
+QAbstractSpinBox::up-button {
+	background-color: rgb(68, 68, 72);
+	border-left: 1px solid rgb(100, 100, 100);
+	border-bottom: 1px solid rgb(100, 100, 100);
+	border-top-right-radius: 4px;
+	padding-left: 3px;
+	padding-right: 3px;
+	image: url(:/images/upArrow.svg);
+	width: 10px;
+	height: 13px;
+}
+
+QAbstractSpinBox::up-button:hover {
+	background-color: rgb(80, 80, 85);
+}
+
+QAbstractSpinBox::down-button {
+	background-color: rgb(68, 68, 72);
+	border-left: 1px solid rgb(100, 100, 100);
+	border-bottom-right-radius: 4px;
+	padding-top: 1px;
+	padding-left: 3px;
+	padding-right: 3px;
+	image: url(:/images/downArrow.svg);
+	width: 10px;
+	height: 13px;
+}
+
+QAbstractSpinBox::down-button:hover {
+	background-color: rgb(80, 80, 85);
+}
+
+QScrollBar::vertical {
+	background-color: transparent;
+	border: none;
+	margin: 15px 2px 15px 2px;
+}
+
+QScrollBar::horizontal {
+	background-color: transparent;
+	border: none;
+	margin: 2px 15px 2px 15px;
+}
+
+QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+	background-color: rgb(100, 100, 110);
+	border: none;
+	min-height: 50px;
+}
+
+QScrollBar::sub-line:vertical {
+	border: none;
+	subcontrol-origin: margin;
+    subcontrol-position: top;
+	padding-left: 1px;
+	width: 15px;
+	height: 15px;
+}
+
+QScrollBar::add-line:vertical {
+	border: none;
+	subcontrol-origin: margin;
+    subcontrol-position: bottom;
+	padding-left: 1px;
+	width: 15px;
+	height: 15px;
+}
+
+QScrollBar::add-line:horizontal {
+	border: none;
+	subcontrol-origin: margin;
+    subcontrol-position: right;
+	padding-top: 1px;
+	width: 15px;
+	height: 15px;
+}
+
+QScrollBar::sub-line:horizontal {
+	border: none;
+	subcontrol-origin: margin;
+    subcontrol-position: left;
+	padding-top: 1px;
+	height: 15px;
+	width: 15px;
+}
+
+QScrollBar::up-arrow:vertical {
+	image: url(:/images/upArrow.svg);
+}
+
+QScrollBar::down-arrow:vertical {
+	image: url(:/images/downArrow.svg);
+}
+
+QScrollBar::left-arrow:horizontal {
+	image: url(:/images/leftArrow.svg);
+}
+
+QScrollBar::right-arrow:horizontal {
+	image: url(:/images/rightArrow.svg);
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical,
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+	background: none;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="toolBar" native="true">
+      <property name="styleSheet">
+       <string notr="true">#toolBar {
+	border-top: 1px solid rgb(35, 40, 50);
+}</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="connectButton">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	color: white;
+	background-color: rgb(70, 70, 70);
+	border: 1px solid rgb(40, 40, 40);
+	border-radius: 15px;
+	icon: url(:/images/disconnect.png);
+}
+
+QPushButton:hover {
+	/*background-color: rgb(30, 90, 150);*/
+	icon: url(:/images/disconnectHover.png);
+}
+
+QPushButton:pressed {
+	background-color: rgb(40, 100, 170);
+	padding-top: 2px;
+	padding-left: 2px;
+}
+
+QPushButton:checked {
+	icon: url(:/images/connect.png);
+}
+
+QPushButton:checked:hover {
+	icon: url(:/images/connectHover.png);
+}</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="PortBox" name="portBox">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="download">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>27</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	color: white;
+	background-color: rgb(70, 70, 70);
+	border: 1px solid rgb(40, 40, 40);
+	border-radius: 15px;
+}
+
+QPushButton:hover {
+	/*background-color: rgb(30, 90, 150);*/
+}
+
+QPushButton:pressed {
+	background-color: rgb(40, 100, 170);
+	padding-top: 2px;
+	padding-left: 2px;
+}
+
+QPushButton:checked {
+}
+
+QPushButton:checked:hover {
+}</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/images/load.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Режим соединения:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="connectMode">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <item>
+          <property name="text">
+           <string>COM порт</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Wi-Fi</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="zoomIn">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>21</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Удалить</string>
+         </property>
+         <property name="text">
+          <string>+</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="zoomOut">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>21</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Удалить</string>
+         </property>
+         <property name="text">
+          <string>−</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="remove">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Старт</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/images/trash_white.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="start">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Старт</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/images/start.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="stop">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Стоп</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/images/stop.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="home">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Старт</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normalon>:/images/home.png</normalon>
+          </iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QProgressBar {
+	color: white;
+	/*background-color: rgb(0, 35, 70);*/
+	background-color: white;
+	border: 1px solid rgb(70, 100, 200);
+	border-radius: 3px;
+}</string>
+         </property>
+         <property name="value">
+          <number>60</number>
+         </property>
+         <property name="textVisible">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <property name="spacing">
+       <number>1</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="frame" native="true">
+        <property name="styleSheet">
+         <string notr="true">#frame {
+	border: 1px solid rgb(35, 40, 50);
+	background-color: rgb(55, 55, 65);
+}</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>1</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QTabWidget" name="tabWidget">
+           <property name="styleSheet">
+            <string notr="true">QTabBar {
+	background-color: rgb(55, 55, 65);
+}
+
+QTabWidget::pane {
+	/*border-top: 1px solid rgb(56, 56, 56);*/
+	border: none;
+ }
+
+QTabBar::tab {
+	color: white;
+	font-size: 11pt;
+	background-color: rgb(70, 70, 80);
+	border: 1px solid rgb(35, 40, 50);
+	padding-left: 7px;
+	padding-top: 3px;
+	padding-right: 7px;
+	padding-bottom: 3px;
+ }
+
+QTabBar::tab:!selected {
+	color: rgb(170, 170, 170);
+	/*background-color: rgb(35, 40, 50);*/
+	background-color: rgb(55, 55, 65);
+}
+
+QTabBar::tab:hover:!selected {
+	background-color: rgb(80, 80, 90);
+}
+
+QTabBar::close-button {
+	image: url(&quot;:/images/cross.svg&quot;);
+	border-radius: 5px;
+	padding: 4px;
+}
+
+QTabBar::close-button:hover {
+	background-color: rgb(115, 115, 120);
+}</string>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <property name="tabsClosable">
+            <bool>true</bool>
+           </property>
+           <property name="movable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="tab">
+            <attribute name="title">
+             <string>Рисунок 1</string>
+            </attribute>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="PaintWidget" name="paintWidget">
+               <property name="styleSheet">
+                <string notr="true">QGraphicsView {
+	background-color: rgb(40, 40, 40);
+	background-image: url(:/images/background.png);
+    background-position: center;
+    background-clip: content;
+}</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_2">
+            <attribute name="title">
+             <string>Рисунок 2</string>
+            </attribute>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QScrollArea" name="scrollArea_2">
+        <property name="styleSheet">
+         <string notr="true">QScrollArea {
+	border: 1px solid rgb(35, 40, 50);
+}</string>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>590</width>
+           <height>490</height>
+          </rect>
+         </property>
+         <widget class="SectionWidget" name="sectionWidget" native="true">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>30</y>
+            <width>321</width>
+            <height>441</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(55, 55, 65);</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_3" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QToolBox" name="toolBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>220</width>
+             <height>400</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/*QToolBox {
+	color: white;
+	background-color: rgb(50, 50, 60);
+}
+
+QToolBox::tab {
+	color: white;
+	background-color: rgb(60, 60, 60);
+	border: 2px outset rgb(50, 50, 50);
+	border-radius: 3px;
+}
+
+QToolBox::tab:hover {
+	color: rgb(0, 255, 255);
+}
+
+QToolBox::tab:pressed {
+	color: rgb(0, 255, 255);
+	border-style: inset;
+	padding-top: 2px;
+	padding-left: 2px;
+}*/
+
+QToolBox::tab {
+	color: white;
+	background-color: rgb(70, 70, 80);
+	border: 1px solid rgb(35, 40, 50);
+	padding-left: 7px;
+	padding-top: 3px;
+	padding-right: 7px;
+	padding-bottom: 3px;
+ }
+
+QToolBox::tab:!selected {
+	color: rgb(170, 170, 170);
+	background-color: rgb(55, 55, 65);
+}
+
+QToolBox::tab:hover:!selected {
+	background-color: rgb(80, 80, 90);
+}</string>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <property name="tabSpacing">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="objectPage">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>220</width>
+              <height>340</height>
+             </rect>
+            </property>
+            <attribute name="label">
+             <string>Добавить объект</string>
+            </attribute>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QScrollArea" name="scrollArea">
+               <property name="styleSheet">
+                <string notr="true">QScrollArea {
+	border: 1px solid rgb(110, 110, 110);
+}</string>
+               </property>
+               <property name="widgetResizable">
+                <bool>true</bool>
+               </property>
+               <widget class="QWidget" name="scrollAreaWidgetContents">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>218</width>
+                  <height>338</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">#scrollAreaWidgetContents {
+	background-color: rgb(40, 40, 40);
+}</string>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_2">
+                 <property name="leftMargin">
+                  <number>7</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>7</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>7</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>7</number>
+                 </property>
+                 <item row="0" column="2">
+                  <widget class="QPushButton" name="addCircle">
+                   <property name="minimumSize">
+                    <size>
+                     <width>60</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>60</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normalon>:/images/circle.png</normalon>
+                    </iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>70</width>
+                     <height>70</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1" colspan="3">
+                  <widget class="QPushButton" name="drawTest">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>174</width>
+                     <height>100</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: white;</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normalon>:/images/drawtest.png</normalon>
+                    </iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>160</width>
+                     <height>180</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="3">
+                  <widget class="QPushButton" name="addPentagon">
+                   <property name="minimumSize">
+                    <size>
+                     <width>60</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>60</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normalon>:/images/polygon.png</normalon>
+                    </iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>70</width>
+                     <height>70</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QPushButton" name="addRect">
+                   <property name="minimumSize">
+                    <size>
+                     <width>60</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>60</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normalon>:/images/rect.png</normalon>
+                    </iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>60</width>
+                     <height>60</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="textPage">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>220</width>
+              <height>384</height>
+             </rect>
+            </property>
+            <attribute name="label">
+             <string>Добавить текст</string>
+            </attribute>
+            <layout class="QVBoxLayout" name="textPageLayout">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QComboBox" name="fontBox">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>220</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTextEdit" name="textEdit">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QTextEdit {
+	border: 1px solid rgb(110, 110, 110);
+	background-color: rgb(45, 45, 45);
+	color: rgb(0, 255, 255);
+}</string>
+               </property>
+               <property name="html">
+                <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="setBold">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Жирный</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="setItalic">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Курсив</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="setUnderline">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Подчёркнутый</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="setStrikeOut">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">padding-bottom: 15px;</string>
+               </property>
+               <property name="text">
+                <string>Зачёркнутый</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="setText">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QAbstractButton {
+	color: white;
+	background-color: rgb(70, 70, 70);
+	border: 2px outset rgb(60, 60, 60);
+	border-radius: 7px;
+}
+
+QAbstractButton:hover {
+	color: rgb(0, 255, 255);
+}
+
+QAbstractButton:pressed {
+	color: rgb(0, 255, 255);
+	border-style: inset;
+	padding-top: 2px;
+	padding-left: 2px;
+}</string>
+               </property>
+               <property name="text">
+                <string>ОК</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1408</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar {
+	color: white;
+}</string>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="create"/>
+    <addaction name="open"/>
+    <addaction name="separator"/>
+    <addaction name="close"/>
+    <addaction name="closeAll"/>
+    <addaction name="save"/>
+    <addaction name="saveAs"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Правка</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Окно</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <action name="create">
+   <property name="text">
+    <string>Создать</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="open">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="save">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="saveAs">
+   <property name="text">
+    <string>Сохранить как</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="close">
+   <property name="text">
+    <string>Закрыть</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="closeAll">
+   <property name="text">
+    <string>Закрыть все</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+W</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PortBox</class>
+   <extends>QComboBox</extends>
+   <header>widgets/portbox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>PaintWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>paintwidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>SectionWidget</class>
+   <extends>QWidget</extends>
+   <header>widgets/sectionwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
